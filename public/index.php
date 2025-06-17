@@ -6,7 +6,7 @@ include 'Template/Navbar.php';
     <canvas id="bg"></canvas>
     <script type="module" src="Javascript/Threejs.js"></script>
     <div class="container">
-        <div class="grid-container">
+      
             <div class="text-content">
                 <div class="Heading">
                 <h1>
@@ -21,8 +21,6 @@ include 'Template/Navbar.php';
                 </div>
             </div>
 
-            <div class="placeholder"> <img id='faceImage' src="Assets/1732365457159.jpg"></div>
-        </div>
     </div>
 
 

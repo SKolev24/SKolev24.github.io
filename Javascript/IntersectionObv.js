@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const textcontainers = document.querySelectorAll(".TextContainer");
+    const textcontainers = document.querySelectorAll(".TextContainer, .TextContainerfast, .TextContainer-pos" );
 
     const observer = new IntersectionObserver(
         entries => {

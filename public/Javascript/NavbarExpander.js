@@ -4,7 +4,7 @@ const navbar = document.querySelector('.navbar');
 const observerOptions = {
     root: null,
     threshold: 0,
-    rootMargin: "-600px 0px 0px 0px"
+    rootMargin: "-800px 0px 0px 0px"
 };
 
 const observerCallback = (entries) => {

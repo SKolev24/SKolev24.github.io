@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const textcontainer = document.querySelector(".TextContainer");
+    const textcontainers = document.querySelectorAll(".TextContainer");
 
     const observer = new IntersectionObserver(
         entries => {
@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
 
-    observer.observe(textcontainer);
+    textcontainers.forEach(container => observer.observe(container));
 });

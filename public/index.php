@@ -7,14 +7,17 @@ include 'Template/Navbar.php';
     <script type="module" src="Javascript/Threejs.js"></script>
     <div class="container">
       
-            <div class="text-content">
-                <div class="Heading">
-                <h1>
-                    Third-Year <br><span class="red-text">Cybersecurity</span><br>
-                    College<br>
-                    Student
-                </h1>
+            <div class="head-text-content">
+                <div class="IndexHeading">
+                    <h1> Stanislav Kolev
+                    </h1>
                 </div>
+                <h2>
+                    Third-Year <span class="red-text">Cybersecurity</span>
+                    College
+                    Student
+                </h2>
+
                 <div class="links">
                     <a href="#" id = "button">Labs and Ctfs<br>Write Ups</a>
                     <a href="#" id = "button">Projects<br>Portfolio</a>
@@ -30,18 +33,84 @@ include 'Template/Navbar.php';
 
     <div class="myinformation">
         <div class="TextContainer">
-            <H1 class="h1BigIndex">Hi Im Stanislav </H1>
+            <H1 class="h1BigIndex">About Me</H1>
             <p>Third-year Cybersecurity student with hands-on experience in network security,
             penetration testing, and digital forensics. Proficient in tools like Wireshark,
             Metasploit, and Burp Suite.
             Passionate about ethical hacking
             and securing systems against real-world threats.</p>
      </div>
-
-
     </div>
 
+    <div class="myinformation">
+        <div class="TextContainer">
+            <h1 class="h1BigIndex">Technical Skills</h1>
+            <div class="skills-cycle">
+                <ul class="scroller-inner">
+                    <li>
+                    <img src="Assets/java.png" alt="Java">
+                    <p>JAVA</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/python-logo-only.png" alt="Python">
+                    <p>PYTHON</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/62779159-4cf76880-baaa-11e9-8318-e20a1aaa913a.png" alt="X86 Assembly">
+                    <p>X86 Assembly</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/new-php-logo.png" alt="PHP">
+                    <p>PHP</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/html-icon-1451x2048-69sehqrp.jpg" alt="HTML">
+                    <p>HTML</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/css-3-icon-726x1024-610441pl.jpg" alt="CSS">
+                    <p>CSS</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/Git_icon.svg.png" alt="Git">
+                    <p>Git</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/BurpSuite_Comunity_Edition.svg.png" alt="Burpsuite">
+                    <p>Burpsuite</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/icons8-metasploit-48.png" alt="Metasploit">
+                    <p>Metasploit</p>
+                    </li>
+                    <li>
+
+                    <img src="Assets/Wireshark_icon.svg.png" alt="Wireshark">
+                    <p>Wireshark</p>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <script src="Javascript/IntersectionObv.js"></script>
+   <script src="Javascript/SkillCycle.js"></script>
 
 
 <?php

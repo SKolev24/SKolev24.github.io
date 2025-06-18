@@ -6,7 +6,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 20px;
+    transition: all 1s ;
     width: fit-content;
     padding: 10px 20px;
     z-index: 1000;
@@ -21,6 +21,7 @@
 
 .navbar li {
     display: inline;
+    text-decoration: none;
 }
 
 .navbar a {
@@ -29,7 +30,7 @@
     transition: 1s;
 }
 .navbar a:hover {
-    text-decoration: underline;
+
     background-color: #1c292e;
     color: white;
     border: 1.5px solid #1c292e;
@@ -46,6 +47,7 @@
     border-radius: 0;
     border: none;
     padding: 20px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ;
     z-index: 2000;
 }
+

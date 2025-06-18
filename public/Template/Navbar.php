@@ -13,6 +13,8 @@
             <li>
                 <a href="../Pages/Blog.php">Blog</a>
             </li>
+
         </ul>
 
     </div>
+

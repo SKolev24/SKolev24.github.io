@@ -1,10 +1,37 @@
-<?php
-include 'Template/Header.php';
-include 'Template/Navbar.php';
-?>
+<script>
+    async function loadTemplate(id, file) {
+        const result = await fetch(file);
+        const html = await result.text();
+        document.getElementById(id).innerHTML = html;
+    }
 
-    <canvas id="bg"></canvas>
+    loadTemplate('header', 'Template/Header.html');
+    loadTemplate('navbar', 'Template/Navbar.html');
+</script>
+
+
+<div id="header"></div>
+<div id="navbar"></div>
+
+<script>
+    fetch('Template/Navbar.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+
+            const script = document.createElement('script');
+            script.src = 'Javascript/NavbarExpander.js';
+            script.onload = () => {
+                    observerCallback();
+            };
+            document.body.appendChild(script);
+        })
+        .catch(console.error);
+</script>
+
+<canvas id="bg"></canvas>
     <script type="module" src="Javascript/Threejs.js"></script>
+
     <div class="container">
       
             <div class="head-text-content">
@@ -107,12 +134,18 @@ include 'Template/Navbar.php';
 
 
 
-
+<div id="footer"></div>
 
     <script src="Javascript/IntersectionObv.js"></script>
    <script src="Javascript/SkillCycle.js"></script>
 
+<script>
+    async function loadTemplate(id, file) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+    }
 
-<?php
-include 'Template/Footer.php';
-?>
+    loadTemplate('footer', 'Template/Footer.html');
+
+</script>

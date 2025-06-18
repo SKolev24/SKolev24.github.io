@@ -1,32 +1,26 @@
-<script>
-    async function loadTemplate(id, file) {
-        const result = await fetch(file);
-        const html = await result.text();
-        document.getElementById(id).innerHTML = html;
-    }
+<script async src="Javascript/TemplateLoader.js" ></script>
+<script defer src="Javascript/IntersectionObv.js"></script>
+<script defer src="Javascript/SkillCycle.js"></script>
 
-    loadTemplate('header', 'Template/Header.html');
-    loadTemplate('navbar', 'Template/Navbar.html');
-</script>
-
-
-<div id="header"></div>
-<div id="navbar"></div>
+<div id="header" ></div>
+<div id="navbar" ></div>
 
 <script>
-    fetch('Template/Navbar.html')
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById('navbar').innerHTML = html;
+    document.addEventListener('DOMContentLoaded', () => {
+        loadTemplate('header', 'Template/Header.html');
+        loadTemplate('footer', 'Template/Footer.html');
 
+        loadTemplate('navbar', 'Template/Navbar.html').then(() => {
             const script = document.createElement('script');
             script.src = 'Javascript/NavbarExpander.js';
             script.onload = () => {
+
                     observerCallback();
+
             };
             document.body.appendChild(script);
-        })
-        .catch(console.error);
+        });
+    });
 </script>
 
 <canvas id="bg"></canvas>
@@ -46,8 +40,8 @@
                 </h2>
 
                 <div class="links">
-                    <a href="#" id = "button">Labs and Ctfs<br>Write Ups</a>
-                    <a href="#" id = "button">Projects<br>Portfolio</a>
+                    <a href="Pages/Writeups.html" id = "button">Labs and Ctfs<br>Write Ups</a>
+                    <a href="Pages/Projects.html" id = "button">Projects<br>Portfolio</a>
                 </div>
             </div>
 
@@ -132,20 +126,6 @@
     </div>
 
 
-
-
 <div id="footer"></div>
 
-    <script src="Javascript/IntersectionObv.js"></script>
-   <script src="Javascript/SkillCycle.js"></script>
 
-<script>
-    async function loadTemplate(id, file) {
-        const res = await fetch(file);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
-    }
-
-    loadTemplate('footer', 'Template/Footer.html');
-
-</script>

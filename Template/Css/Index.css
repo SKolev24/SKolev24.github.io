@@ -166,8 +166,8 @@ body{
 
 .footer{
     background: #121719;
-    margin-top: 300px;
-    display: flex;
+
+
 }
 
 #faceImage {
@@ -207,4 +207,11 @@ body{
     to{
         transform: translate(calc(-47% - 2rem));
     }
+}
+
+.footerp{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 4px 0;
 }

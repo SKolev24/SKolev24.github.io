@@ -1,0 +1,176 @@
+body{
+    background-color: #30343F;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem;
+    box-sizing: border-box;
+}
+.name{
+    font-size: 5rem;
+    line-height: 1.2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FAFAFF;
+}
+.decor {
+    background-color: rgb(255, 171, 0);
+    display: inline-block;
+    padding: 1rem;
+    margin-left: -50rem;
+    position: relative;
+    width: 80rem;
+    box-sizing: border-box;
+}
+
+.decor > * {
+    position: relative;
+    left: 50rem;
+    width: fit-content;
+    max-width: 100%;
+
+}
+.nameHeadin, .about {
+    flex: 1 1 300px;
+    box-sizing: border-box;
+
+}
+.about {
+    border:  #FAFAFF solid 5px;
+    padding: 0.5rem;
+}
+.about p {
+    word-wrap: break-word;
+    color: #FAFAFF;
+}
+.whoami{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: #FAFAFF;
+    font-size: 1.5rem;
+    margin-top: -2.5rem;
+}
+.aboutHeading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FAFAFF;
+    border-bottom: #ce8147 5px solid;
+    display: inline;
+    padding-bottom: 2px;
+    margin-bottom: 0.5rem;
+
+}
+.about li {
+    list-style: none;
+    padding: 0.5rem;
+    color: #FAFAFF;
+    border: #ce8147 2px solid;
+    display: inline-block;
+    margin: 0.3rem;
+}
+
+.links a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #FAFAFF;
+    gap: 3rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    transition: all 0.5s;
+    border: #FAFAFF 2px solid;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #ce8147;
+
+}
+.links a:hover {
+    background-color:#FAFAFF;
+    color: #30343F;
+    transition: all 0.5s;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.projectSEC{
+    display: flex;
+    flex-direction: column;
+    color: #FAFAFF;
+}
+
+.projectInner{
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    color: #FAFAFF;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.projectInner img{
+    max-width: 50px;
+    padding: 10px;
+}
+.projectDESC{
+    background-color: #ce8147;
+    color: #FAFAFF;
+    flex-wrap: wrap;
+}
+.projectHeading{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FAFAFF;
+    border-bottom: #ce8147 5px solid;
+}
+
+.projectTITLESECT{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FAFAFF;
+    display: flex;
+    justify-content: center;
+    border-bottom: #ce8147 8px solid;
+    margin-bottom: 2.5rem;
+}
+.projectLink{
+
+}
+.projectLink:hover{
+    transform: scale(0.9);
+    transition: all 1s;
+}
+@media (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .decor {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .decor > * {
+        left: 0;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .whoami {
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .links {
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+

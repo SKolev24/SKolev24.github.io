@@ -1,0 +1,141 @@
+body{
+    font-family: "Inria Serif",serif;
+    
+    background-color: #1b1b1b;
+
+}
+
+#Navbar{
+    margin-top: 2rem;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+#name{
+    align-items: center;
+    display: flex;
+    font-size: 5;
+    margin-left: 30rem;
+    color: rgb(255, 255, 255);
+}
+#navItems{
+    display: inline-flex;
+    margin-left: auto;
+    gap: 1rem;
+    margin-right: 30rem;
+}
+#navItems a{
+    text-decoration: none; 
+}
+#navItems img {
+    max-width: 2rem;
+}
+
+.blackSquare{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgb(27, 27, 27);
+    align-items: center;
+    padding-top: 22rem;
+    padding-bottom: 22rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: -10rem;
+    margin-bottom: 20rem;
+
+}
+
+.blackSquare h1{
+    animation: 2s ease-out 0s 1 slide;
+       font-family: "Inria Serif",serif;
+    color: rgb(190, 197, 166);
+      font-weight:900;
+}
+
+.in_blk_square{
+    display: flex;
+    flex-direction:row;
+    gap: 2rem;
+
+
+}
+
+.in_blk_square a {
+     animation: 2s ease-out 0s 1 slide;
+
+    border-bottom: white 5px solid;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10rem;
+    padding: 2rem;
+    font-family: "Inria Serif",serif;
+    font-size: large;
+
+}
+
+.in_blk_square a:hover{
+    border-bottom: rgb(136, 158, 64) 5px solid;
+    color: rgb(136, 158, 64);
+    transition: 0.5s;
+}
+
+.homeContainer{
+        display: flex;
+        flex-direction:row;
+        gap: 2rem;
+        color:white;
+}
+.homeContainer h1{
+
+        color:rgb(136, 158, 64);
+}
+
+@media only screen and (max-width: 1200px) {
+    body{
+    font-family: "Inria Serif",serif;
+    background-color: rgb(27, 27, 27);
+    }
+    
+    .in_blk_square{
+        display: flex;
+        flex-direction:column;
+        gap: 2rem;
+
+
+    }
+    .homeContainer{
+            display: Row;
+            flex-direction:column;
+            gap: 2rem;
+    }
+    #name{
+    align-items: center;
+    display: flex;
+    font-size: 5;
+    margin-left: 0rem;
+
+    }
+        #navItems{
+        display: inline-flex;
+        margin-left: auto;
+        gap: 1rem;
+        margin-right: 0rem;
+    }
+
+    .blackSquare{
+        align-items: center;
+        padding: 10rem;
+        margin: 0;
+    }
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}

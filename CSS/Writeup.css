@@ -1,7 +1,72 @@
 .WR-Text{
+    color: rgb(190, 197, 166);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid rgb(190, 197, 166);
     padding: 5rem;
+}
+#name{
+    align-items: center;
+    display: flex;
+    font-size: 5;
+    margin-left: 15rem;
+    color: rgb(255, 255, 255);
+}
+.blackSquare{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgb(27, 27, 27);
+    align-items: center;
+    padding-top: 22rem;
+    padding-bottom: 22rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: -10rem;
+    margin-bottom: -30rem;
+
+}
+.blackSquare h1{
+    animation: 2s ease-out 0s 1 slide;
+       font-family: "Inria Serif",serif;
+    color: rgb(190, 197, 166);
+      font-weight:900;
+    font-size: 50px;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 1200px) {
+    body{
+    font-family: "Inria Serif",serif;
+    background-color: rgb(27, 27, 27);
+    }
+
+    #name{
+    align-items: center;
+    display: flex;
+    font-size: 5;
+    margin-left: 0rem;
+
+    }
+        #navItems{
+        display: inline-flex;
+        margin-left: auto;
+        gap: 1rem;
+        margin-right: 0rem;
+    }
+
+    .blackSquare{
+        align-items: center;
+        padding: 10rem;
+        margin: 0;
+    }
 }

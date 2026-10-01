@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="../CSS/Index.css" rel="stylesheet">
+    <link href="../CSS/Writeup.css" rel="stylesheet">
+     <title>SKolev</title>
+</head>
+<body>
+    <div id="Navbar">
+        <div id="name">
+            <h1>S.Kolev</h1>
+        </div>
+        <div id="navItems">
+            <a href="https://github.com/SKolev24"><img  src="../imgs/githubwhite.png"></a>
+            <a href="https://www.linkedin.com/in/stanislav-kolev-7857742b2/"><img  src="../imgs/linkedinwhite.png"></a>
+                      <a href="https://app.hackthebox.com/public/users/2256067"><img  src="../imgs/hackthebox.png"></a>
+            <a href="https://tryhackme.com/p/StanislavKTUD?tab=completed-rooms"><img  src="../imgs/Tryhackme--Streamline-Simple-Icons.svg"></a>
+        </div>
+    </div>
+    <div class="WR-Text">
+        <h1>Synopsis</h1>
+         <p>The goal of this project is to setup a honeypot using tpot to observe attack behaviour from real world traffic and to learn cloud operations.</p>
+            <h1>The Hive – Google Cloud</h1>
+       
+        <h2>1. Initial Setup</h2>
+            <p>Once you have created a project you must use the side menu to access Compute Engine -> VM Instances. 
+              (This may not be immediately available, if this is you first time on google cloud you will need to enable the compute engine API.):</p>
+        
+        <h2>2. Machine Creation</h2>
+            <p>Once you reach the VM instances menu click Create Instance. The required specification with minimal cost would require the following settings:</p>
+            <h3>Machine Configuration:</h3>
+            <ul>
+                <li><i>Region: Any</i></li>
+                <li><i>Machine Type: E2</i></li>
+                <li><i>Preset: Standard -> e2-standard-4</i></li>
+            </ul>
+            <h3>OS and Storage:</h3>
+            <ul>
+                <li><i>OS: Debian 13 Trixie</i></li>
+                <li><i>Size: 250gbs</i></li>
+            </ul>
+            <h3>Networking:</h3>
+            <ul>
+                <li><i>Allow HTTP Traffic: True</i></li>
+                <li><i>Allow HTTPS Traffic: True</i></li>
+                <li><i>Network Tags (add a network tag for firewall settings): TPOT-NETWORK</i></li>
+            </ul>
+            <p>You can now press <b>create</b></p>
+        
+        <h2>3. Firewall Setup</h2>
+            <p>Once again enter the side menu where we previously found the compute engine and choose VPC Networks -> Firewall.</p>
+            <p>After that click on Create new firewall rule:</p>
+             <ul>
+                <li><i>Select any name</i></li>
+                <li><i>On specified targets -> tags options: TPOT-NETWORK</i></li>
+                <li><i>Source IP ranges : 0.0.0.0/0</i></li>
+                <li><i>Protocol and ports: Allow All</i></li>
+                <li><i>Save</i></li>
+            </ul>
+
+        <h2>4. T-POT Setup</h2>
+        <p>SSH into the machine:</p>
+           <ul>
+                <li><i>Install git and curl on the machine:</i></li>
+                    <ul>
+                        <li>> sudo apt install git curl</li>
+                    </ul>
+                <li><i>Install T-POT</i></li>
+                    <ul>
+                        <li>> git clone https://github.com/telekom-security/tpotce.git</li>
+                        <li>Run through the installation and choose the hive option when prompted and select you username and password which will be used to access the GUI later on.</li>
+                        <li>After the installation is done:</li>
+                            <ul>
+                                <li>> Sudo Reboot</li>
+                            </ul>
+                         <li>New Ports:</li>
+                             <ul>
+                                <li>SSH: 64295</li>
+                                <li>GUI (to view on browser): 64297</li>
+                            </ul>
+                    </ul>
+                <li>If running the installer fails:</i></li>
+                    <ul>
+                        <li>sudo systemctl disable –now exim4 </li>
+                    </ul>
+            </ul>
+
+    </div>
+</body>
+</html>
